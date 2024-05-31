@@ -1,0 +1,61 @@
+/* Estilos generales */
+body.inicio {
+    background-image: url('./imagen_inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Color de texto principal */
+}
+body.contacto {
+    background-image: url('./imagen_contacto.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Color de texto principal */
+}
+body.comida-tradicional {
+    background-image: url('./imagen_comida.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Color de texto principal */
+}
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Estilos para botones */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #94e8eb;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para enlaces */
+.enlaces {
+    text-align: center;
+    margin-top: 20px;
+}
+/* style.css */
+body.azul { background-color: #ADD8E6; }
+body.verde { background-color: #98FB98; }
+body.amarillo { background-color: #FFFFE0; }
+
+/* Añade otros estilos aquí */
