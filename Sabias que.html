@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabías que - Haciendas de Huasca de Ocampo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Encabezado -->
     <header>
         <h1>Las Haciendas de Huasca de Ocampo</h1>
     </header>
+    
+    <div id="color-selector">
+        <label for="colores">Elige un color:</label>
+        <select id="colores" onchange="cambiarColor()">
+            <option value="default">Selecciona un color</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+        </select>
+    </div>
 
-    <!-- Contenido principal -->
     <main>
         <section>
             <h2>Haciendas Importantes de Huasca de Ocampo</h2>
@@ -20,34 +28,48 @@
 
             <div class="haciendas">
                 <div class="hacienda">
-                    <img src="hacienda_san_miguel.jpg" alt="Hacienda San Miguel Regla">
+                    <img src="img/Hacienda San Miguel Regla.jpg" alt="Hacienda San Miguel Regla">
                     <h3>Hacienda San Miguel Regla</h3>
-                    <p>La Hacienda San Miguel Regla es una de las más emblemáticas, fundada en el siglo XVIII. Su impresionante arquitectura y hermosos jardines la hacen un lugar imperdible.</p>
+                    <p>
+                        La Hacienda San Miguel Regla es una de las más emblemáticas de Huasca de Ocampo. Fundada en el siglo XVIII por Don Pedro Romero de Terreros, es conocida por su arquitectura colonial y sus hermosos jardines. Esta hacienda fue originalmente un importante centro de producción minera y agrícola. Hoy en día, es un popular destino turístico donde los visitantes pueden explorar sus impresionantes patios, capillas y estanques. Además, ofrece actividades recreativas como paseos a caballo y eventos culturales. La hacienda ha sido escenario de varias películas y series de televisión, destacando su importancia cultural y turística.
+                    </p>
                 </div>
                 <div class="hacienda">
-                    <img src="hacienda_santa_maria.jpg" alt="Hacienda Santa María Regla">
+                    <img src="img/Hacienda Santa María Regla.jpg" alt="Hacienda Santa María Regla">
                     <h3>Hacienda Santa María Regla</h3>
-                    <p>Construida en el siglo XVIII, la Hacienda Santa María Regla es famosa por sus espectaculares paisajes y su papel histórico en la minería de la región.</p>
+                    <p>
+                        Construida en el siglo XVIII, la Hacienda Santa María Regla es famosa por su espectacular paisaje y su papel histórico en la minería de la región. Fundada también por Don Pedro Romero de Terreros, esta hacienda destaca por sus estructuras de piedra y su ambiente tranquilo. La hacienda está situada en un cañón rodeado de formaciones rocosas y cascadas, lo que la convierte en un lugar de gran belleza natural. Además de su importancia histórica, la Hacienda Santa María Regla es un destino ideal para actividades al aire libre como senderismo, exploración de cuevas y visitas guiadas que narran su rica historia.
+                    </p>
                 </div>
                 <div class="hacienda">
-                    <img src="hacienda_san_antonio.jpg" alt="Hacienda San Antonio Regla">
+                    <img src="img/Hacienda San Antonio Regla.jpeg" alt="Hacienda San Antonio Regla">
                     <h3>Hacienda San Antonio Regla</h3>
-                    <p>Esta hacienda, también del siglo XVIII, destaca por su majestuosidad y su importancia en la producción de plata en la época colonial.</p>
+                    <p>
+                        La Hacienda San Antonio Regla, también del siglo XVIII, es conocida por su majestuosidad y su importancia en la producción de plata durante la época colonial. Fundada por el mismo propietario que las otras haciendas, esta propiedad fue clave en el desarrollo económico de la región. La hacienda cuenta con una impresionante arquitectura, incluyendo una gran casa principal, capillas, y extensos jardines. Actualmente, es un sitio turístico donde se pueden realizar actividades como recorridos históricos, eventos culturales y bodas. La Hacienda San Antonio Regla es un testimonio de la opulencia y la historia de Huasca de Ocampo.
+                    </p>
                 </div>
             </div>
 
             <h2>Video sobre las Haciendas de Huasca de Ocampo</h2>
             <p>Para conocer más sobre estas fascinantes haciendas, te invitamos a ver el siguiente video:</p>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tucodigo_video" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Fhc8mgyxlxE?si=4m8NJ2px2rJrw9WG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p><strong>Video por:</strong> SantosRecorre</p>
+                <p><strong>Fecha de estreno:</strong> 15 de enero de 2023</p>
+                <p><strong>Descripción del video:</strong> HUASCA DE OCAMPO es un pueblo mágico de México ubicado en el estado de HIDALGO. Este video muestra los principales atractivos turísticos de la región, incluyendo los espectaculares prismas basálticos y otras maravillas naturales y culturales que ofrece este hermoso lugar.</p>
+                <p><strong>Redes sociales del autor:</strong></p>
+                <p><a href="https://www.facebook.com/santosrecorre">Facebook</a> | <a href="https://www.instagram.com/santosrecorre">Instagram</a></p>
             </div>
         </section>
 
-        <!-- Cuestionario -->
         <section>
             <h2>Te invitamos a que participes en nuestro cuestionario</h2>
             <p>El mejor obtendrá un premio. Responde las siguientes preguntas sobre Huasca de Ocampo:</p>
             <form id="cuestionario">
+                <div class="pregunta">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+                </div>
                 <div class="pregunta">
                     <label for="pregunta1">1. ¿En qué siglo fue fundada la Hacienda San Miguel Regla?</label><br>
                     <input type="radio" id="p1a" name="pregunta1" value="XVII"> Siglo XVII<br>
@@ -105,52 +127,18 @@
                 <button type="button" onclick="calificarCuestionario()">Enviar</button>
             </form>
             <p id="resultado"></p>
+            <h3>Resultados previos:</h3>
+            <ul id="resultados-previos"></ul>
         </section>
     </main>
 
-    <!-- Botones para enlaces a otras páginas -->
     <div class="enlaces">
         <a href="contacto.html" class="boton">Contacto</a>
         <a href="index.html" class="boton">Volver a Inicio</a>
     </div>
-
-    <!-- Pie de página -->
     <footer>
         <p>Guillermo Martinez</p>
     </footer>
-
-    <script>
-        function calificarCuestionario() {
-            const respuestasCorrectas = {
-                pregunta1: 'XVIII',
-                pregunta2: 'Santa María Regla',
-                pregunta3: 'San Antonio Regla',
-                pregunta4: 'Hidalgo',
-                pregunta5: 'Senderismo',
-                pregunta6: 'San Miguel Regla',
-                pregunta7: 'Talleres de artesanía',
-                pregunta8: 'Siglo XVIII',
-                pregunta9: 'Santa María Regla'
-            };
-            
-            let puntaje = 0;
-            
-            for (let pregunta in respuestasCorrectas) {
-                const opciones = document.getElementsByName(pregunta);
-                for (let i = 0; i < opciones.length; i++) {
-                    if (opciones[i].checked && opciones[i].value === respuestasCorrectas[pregunta]) {
-                        puntaje++;
-                    }
-                }
-            }
-            
-            const resultado = document.getElementById('resultado');
-            if (puntaje >= 6) {
-                resultado.textContent = `Aprobado con ${puntaje} de 9 puntos. ¡Felicidades!`;
-            } else {
-                resultado.textContent = `Desaprobado con ${puntaje} de 9 puntos. ¡Sigue intentándolo!`;
-            }
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

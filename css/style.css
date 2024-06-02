@@ -37,7 +37,7 @@ section {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff;
-    color: #94e8eb;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     margin-right: 10px;
@@ -53,9 +53,39 @@ section {
     text-align: center;
     margin-top: 20px;
 }
-/* style.css */
+
+/* Estilos para el selector de colores */
+#color-selector {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilos para el carousel */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para la sección "Sabías que" */
+.haciendas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hacienda {
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.hacienda img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para el cambio de color */
 body.azul { background-color: #ADD8E6; }
 body.verde { background-color: #98FB98; }
 body.amarillo { background-color: #FFFFE0; }
-
-/* Añade otros estilos aquí */

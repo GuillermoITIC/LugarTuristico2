@@ -4,47 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo lo que no sabes de Huasca de Ocampo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Enlace a Bootstrap CSS para el carrusel -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <!-- Encabezado -->
-    <header>
+    <header class="bg-primary text-white text-center py-3">
         <h1>Hablemos sobre su gastronomía</h1>
     </header>
 
+    <div id="color-selector" class="text-center my-4">
+        <label for="colores">Elige un color:</label>
+        <select id="colores" onchange="cambiarColor()">
+            <option value="default">Selecciona un color</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+        </select>
+    </div>
+
     <!-- Contenido principal -->
-    <main>
+    <main class="container my-5">
         <section>
-            <h2>Gastronomía de Huasca de Ocampo</h2>
-            <p>La comida tradicional de Huasca de Ocampo refleja la rica cultura e historia de la región. A continuación, se presentan algunos platillos típicos:</p>
-    
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <h2 class="text-center mb-4">Gastronomía de Huasca de Ocampo</h2>
+            <p class="text-center">La comida tradicional de Huasca de Ocampo refleja la rica cultura e historia de la región. A continuación, se presentan algunos platillos típicos:</p>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="Tamales de chipilín" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="Barbacoa de Borrego"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="Escamoles"></li>
-                    <!-- Indicadores según el número de platillos -->
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="TM.jpeg" alt="Primer platillo">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Tamales de chipilín</h5>
+                        <img class="d-block w-100" src="img/TM.jpeg" alt="Tamales de chipilín">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5 class="text-white">Tamales de chipilín</h5>
+                            <p class="text-white">Deliciosos tamales preparados con hojas de chipilín, un ingrediente tradicional de la región.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="BB.jpg" alt="Segundo platillo">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Barbacoa de borrego</h5>
+                        <img class="d-block w-100" src="img/BB.jpg" alt="Barbacoa de borrego">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5 class="text-white">Barbacoa de borrego</h5>
+                            <p class="text-white">Una de las especialidades más conocidas, cocinada lentamente en hornos de tierra.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="ES.jpg" alt="Tercer platillo">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Escamoles</h5>
+                        <img class="d-block w-100" src="img/ES.jpg" alt="Escamoles">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5 class="text-white">Escamoles</h5>
+                            <p class="text-white">Considerados el caviar mexicano, los escamoles son las larvas de hormiga, un manjar muy apreciado.</p>
                         </div>
                     </div>
-                    <!-- Items de carrusel según el número de platillos -->
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/GorditasNata.jpeg" alt="Gorditas de nata">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5 class="text-white">Gorditas de nata</h5>
+                            <p class="text-white">Dulces y esponjosas, son una delicia tradicional para el desayuno o la merienda.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/SopaHongos.jpeg" alt="Sopa de hongos">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5 class="text-white">Sopa de hongos</h5>
+                            <p class="text-white">Una sopa nutritiva y reconfortante hecha con hongos frescos de la región.</p>
+                        </div>
+                    </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -55,21 +84,24 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-    
-            <p>¡No te pierdas la oportunidad de disfrutar de estos deliciosos platillos durante tu visita a Huasca de Ocampo!</p>
+
+            <p class="text-center mt-4">¡No te pierdas la oportunidad de disfrutar de estos deliciosos platillos durante tu visita a Huasca de Ocampo!</p>
         </section>
     </main>
-    
 
-    <!-- Botones para enlaces a otras páginas -->
-    <div class="enlaces">
-        <a href="contacto.html" class="boton">Contacto</a>
-        <a href="index.html" class="boton">Volver a Inicio</a>
+    <div class="enlaces text-center">
+        <a href="contacto.html" class="btn btn-primary mx-2">Contacto</a>
+        <a href="index.html" class="btn btn-primary mx-2">Volver a Inicio</a>
     </div>
 
-    <!-- Pie de página -->
-    <footer>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>Guillermo Martinez</p>
     </footer>
+
+    <!-- Enlace a jQuery, Popper.js y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

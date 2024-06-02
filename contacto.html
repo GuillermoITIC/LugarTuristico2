@@ -3,33 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayuda, soluciones o preguntas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<style>
-    body.azul { background-color: #ADD8E6; }
-    body.verde { background-color: #98FB98; }
-    body.amarillo { background-color: #FFFFE0; }
-</style>
+    <title>Contacto - Huasca de Ocampo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Enlace a Bootstrap CSS para mejorar el diseño -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlace a estilos para cambio de colores -->
+    <style>
+        body.azul { background-color: #ADD8E6; }
+        body.verde { background-color: #98FB98; }
+        body.amarillo { background-color: #FFFFE0; }
+    </style>
 </head>
 <body>
-
-        <!-- Encabezado -->
-    <header>
-        <h1>Te dejamos la bienvenida a Huasca de Ocampo</h1>
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Huasca de Ocampo - Pueblo Mágico</h1>
     </header>
-    
-    <!-- Contenido principal -->
-    <main>
-        <section>
-            <h2>Información de Contacto</h2>
-            <p>Si deseas obtener más información sobre Huasca de Ocampo o tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
-            <p>Correo electrónico: info@huascadeocampo.mx</p>
-            <p>Teléfono: +52 123 456 7890</p>
-        </section>
-    </main>
-    <!-- Menú de selección de color -->
-    <div id="color-selector">
+
+    <!-- Selector de colores -->
+    <div class="container my-3 text-center">
         <label for="colores">Elige un color:</label>
         <select id="colores" onchange="cambiarColor()">
             <option value="default">Selecciona un color</option>
@@ -37,16 +29,90 @@
             <option value="verde">Verde</option>
             <option value="amarillo">Amarillo</option>
         </select>
-        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="container my-5">
+        <section>
+            <h2 class="text-center mb-4">Información de Contacto y Lugares de Interés en Huasca de Ocampo</h2>
+            <p>Si deseas obtener más información sobre Huasca de Ocampo o tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
+            <p>Correo electrónico: martinez.armando.dm@gmail.com</p>
+            <p>Teléfono: 7717466247</p>
+        </section>
+
+        <section>
+            <h2 class="text-center mb-4">Lugares de Interés en Huasca de Ocampo</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3>Cascadas de Prismas Basálticos</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/Esa2GriKrcncP9zi7" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.facebook.com/prismasbasalticos" target="_blank">Facebook</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Hacienda San Miguel Regla</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/hjzi7pC3GXmhBb9j8" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.instagram.com/sanmiguelregla" target="_blank">Instagram</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Hacienda Santa María Regla</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/o3YVZf1wfBeFEURJA" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.facebook.com/santamariaregla" target="_blank">Facebook</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Presa San Antonio</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/iCThUYT19GqPPu5P7" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.instagram.com/presasanantonio" target="_blank">Instagram</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Parroquia de San Juan Bautista</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/cztBonEQpZbsnouw8" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.facebook.com/sanjuanbautista" target="_blank">Facebook</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>El Bosque de las Truchas</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/81TSvQf2SmCQndgx9" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.instagram.com/bosquedelastruchas" target="_blank">Instagram</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Museo de los Duendes</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/PP7zvcYhAyZrGdha7" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.facebook.com/museodelosduendes" target="_blank">Facebook</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Peña del Aire</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/h8gSuqpBLCUSG5879" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.instagram.com/penadelaire" target="_blank">Instagram</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>El Huariche</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/oAh4NRfAyAPPMf8f9" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.facebook.com/elhuariche" target="_blank">Facebook</a></p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Centro Histórico de Huasca</h3>
+                    <p>Ubicación: <a href="https://maps.app.goo.gl/VoyGprSMM9R6CKbbA" target="_blank">Google Maps</a></p>
+                    <p>Red Social: <a href="https://www.instagram.com/centrohistorico" target="_blank">Instagram</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- Botones para enlaces a otras páginas -->
-    <div class="enlaces">
-        <a href="ComidaTradicional.html" class="boton">Comida Tradicional</a>
-        <a href="index.html" class="boton">Volver a Inicio</a>
+    <div class="enlaces text-center my-4">
+        <a href="ComidaTradicional.html" class="btn btn-primary mx-2">Comida Tradicional</a>
+        <a href="index.html" class="btn btn-primary mx-2">Volver a Inicio</a>
+        <a href="Sabias que.html" class="btn btn-primary mx-2">Sabías que</a>
     </div>
 
     <!-- Pie de página -->
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <p>Guillermo Martinez</p>
     </footer>
+
+    <!-- Enlace a jQuery, Popper.js y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -4,76 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huasca de Ocampo - Pueblo Mágico</title>
-    <!-- Enlace a tu archivo CSS si lo tienes -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Enlace a Bootstrap CSS para mejorar el diseño -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlace a estilos para cambio de colores -->
+    <style>
+        body.azul { background-color: #ADD8E6; }
+        body.verde { background-color: #98FB98; }
+        body.amarillo { background-color: #FFFFE0; }
+    </style>
 </head>
 <body>
     <!-- Encabezado -->
-    <header>
+    <header class="bg-primary text-white text-center py-3">
         <h1>Huasca de Ocampo - Pueblo Mágico</h1>
     </header>
+    <!-- Contador de visitas -->
+    <div class="container my-3 text-center">
+        <p>Visitas a esta página: <span id="visit-counter">0</span></p>
+    </div>
+    <!-- Selector de colores -->
+    <div class="container my-3 text-center">
+        <label for="colores">Elige un color:</label>
+        <select id="colores" onchange="cambiarColor()">
+            <option value="default">Selecciona un color</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+        </select>
+    </div>
 
     <!-- Contenido principal -->
-    <main>
-                <!-- Barra deslizante de lugares de interés -->
+    <main class="container my-5">
+        <!-- Nueva sección de Historia -->
         <section>
-            <h2>Lugares de interés</h2>
-            <div class="barra-deslizante">
-                <a href="#prismas">Cascadas de Prismas Basálticos</a>
-                <a href="#san_miguel">Hacienda San Miguel Regla</a>
-                <a href="#santa_maria">Hacienda Santa María Regla</a>
-                <a href="#presa">Presa San Antonio</a>
-                <a href="#parroquia">Parroquia de San Juan Bautista</a>
+            <h2 class="text-center mb-4">Historia de Huasca de Ocampo</h2>
+            <p>
+                Huasca de Ocampo, ubicado en el estado de Hidalgo, México, es un destino que ha capturado la imaginación y el interés de visitantes de todo el mundo. Su historia se remonta a tiempos prehispánicos, cuando la región era habitada por diversos grupos indígenas, incluyendo otomíes y nahuas. Estas culturas dejaron su huella en la región, lo que se puede apreciar en los vestigios arqueológicos y las tradiciones que aún persisten en la comunidad.
+            </p>
+            <p>
+                Con la llegada de los españoles en el siglo XVI, Huasca de Ocampo comenzó a transformarse. Los colonizadores españoles trajeron consigo nuevas técnicas agrícolas y de minería, lo que condujo a la fundación de importantes haciendas. Durante los siglos XVII y XVIII, Huasca de Ocampo se consolidó como un centro minero de gran relevancia. Las haciendas, como San Miguel Regla y Santa María Regla, no solo sirvieron como centros de producción, sino también como símbolos de la riqueza y el poder de la época colonial.
+            </p>
+            <p>
+                En el siglo XIX, Huasca de Ocampo experimentó un auge económico debido a la explotación minera y la producción agrícola. Este desarrollo atrajo a una diversa población de trabajadores y comerciantes, contribuyendo a la mezcla cultural que caracteriza a la región. Durante este período, se construyeron muchas de las edificaciones que hoy en día son consideradas patrimonio histórico.
+            </p>
+            <p>
+                A lo largo del siglo XX, Huasca de Ocampo continuó evolucionando, adaptándose a los cambios económicos y sociales de México. La comunidad ha logrado preservar su patrimonio histórico y cultural, convirtiéndose en un destino turístico de renombre. En 2001, Huasca de Ocampo fue designado como el primer Pueblo Mágico de México, un reconocimiento que destaca su belleza natural, su riqueza cultural y su importancia histórica.
+            </p>
+            <p>
+                Hoy en día, Huasca de Ocampo sigue siendo un lugar donde la historia y la modernidad coexisten armoniosamente. Los visitantes pueden explorar sus antiguas haciendas, disfrutar de la impresionante geología de los Prismas Basálticos, y participar en festivales y eventos que celebran las tradiciones locales. Huasca de Ocampo es, sin duda, un testimonio vivo de la rica herencia cultural de México.
+            </p>
+        </section>
+
+        <!-- Información sobre por qué es un Pueblo Mágico -->
+        <section>
+            <h2 class="text-center mb-4">¿Por qué es un Pueblo Mágico?</h2>
+            <p>
+                Huasca de Ocampo es un destino que encanta a quienes lo visitan por su combinación única de historia, cultura y belleza natural. Nombrado Pueblo Mágico en el año 2001, este lugar ofrece una experiencia inolvidable a sus visitantes. A continuación, exploramos las razones por las que Huasca de Ocampo se ha ganado este prestigioso título.
+            </p>
+            <p>
+                La historia de Huasca de Ocampo se remonta a la época prehispánica, cuando estaba habitado por grupos otomíes y toltecas. Durante la colonización española, la región se convirtió en un centro minero importante, con la fundación de varias haciendas que aún se conservan en la actualidad. Estas haciendas son testimonio del auge económico de la región durante los siglos XVII y XVIII. Entre las más destacadas se encuentran la Hacienda San Miguel Regla y la Hacienda Santa María Regla, las cuales ofrecen una visión fascinante de la arquitectura colonial y la historia minera.
+            </p>
+            <p>
+                La riqueza natural de Huasca de Ocampo es otro de sus grandes atractivos. El paisaje está dominado por formaciones geológicas impresionantes, como los Prismas Basálticos, que son columnas de basalto formadas por la solidificación de lava hace millones de años. Este fenómeno geológico es uno de los pocos en el mundo y ofrece un espectáculo visual que deja maravillados a los visitantes. Además, la región cuenta con numerosas cascadas, ríos y bosques que son ideales para actividades al aire libre como senderismo, pesca y paseos en bote.
+            </p>
+            <p>
+                La gastronomía de Huasca de Ocampo también es un punto fuerte. Los platillos tradicionales, como la barbacoa de borrego, los tamales de chipilín y los escamoles, reflejan la rica cultura culinaria de la región. Estos platillos son preparados con ingredientes locales y técnicas que han sido transmitidas de generación en generación, ofreciendo a los visitantes una experiencia culinaria auténtica.
+            </p>
+            <p>
+                La comunidad de Huasca de Ocampo es conocida por su hospitalidad y calidez. Los festivales y eventos culturales se celebran durante todo el año, destacando las tradiciones y costumbres locales. Los visitantes tienen la oportunidad de participar en actividades como danzas tradicionales, ferias artesanales y ceremonias religiosas que brindan una visión profunda de la vida en este encantador pueblo.
+            </p>
+            <p>
+                En resumen, Huasca de Ocampo es un Pueblo Mágico que combina historia, naturaleza, cultura y gastronomía en un solo lugar. Su riqueza histórica, belleza natural y vibrante vida comunitaria hacen de este destino un lugar imperdible para quienes buscan una experiencia auténtica y enriquecedora.
+            </p>
+        </section>
+
+        <!-- Información sobre los lugares más visitados -->
+        <section>
+            <h2 class="text-center mb-4">Lugares más visitados y cómo llegar</h2>
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <img src="img/prismas_basalticos.jpeg" class="img-fluid" alt="Prismas Basálticos">
+                </div>
+                <div class="col-md-6">
+                    <h3>Cascadas de Prismas Basálticos</h3>
+                    <p>
+                        Las Cascadas de Prismas Basálticos son una de las principales atracciones turísticas de Huasca de Ocampo. Formadas por columnas de basalto hexagonales, estas cascadas ofrecen un espectáculo natural impresionante. La formación geológica es el resultado de la solidificación de lava hace millones de años, creando estructuras únicas en el mundo.
+                    </p>
+                    <p>
+                        <strong>Cómo llegar:</strong> Desde el centro de Huasca de Ocampo, puedes tomar un taxi o conducir aproximadamente 20 minutos hacia el noreste. Las señalizaciones en el camino te guiarán directamente a los Prismas Basálticos.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <img src="img/san_miguel_regla.jpg" class="img-fluid" alt="Hacienda San Miguel Regla">
+                </div>
+                <div class="col-md-6">
+                    <h3>Hacienda San Miguel Regla</h3>
+                    <p>
+                        La Hacienda San Miguel Regla es una antigua hacienda minera fundada en el siglo XVIII. Este sitio histórico ofrece a los visitantes la oportunidad de explorar sus hermosos jardines, patios y edificios coloniales, brindando una experiencia única de la arquitectura y vida colonial.
+                    </p>
+                    <p>
+                        <strong>Cómo llegar:</strong> La hacienda se encuentra a unos 15 minutos en coche desde el centro de Huasca de Ocampo. Puedes llegar siguiendo las señales hacia la Hacienda San Miguel Regla, ubicada en las afueras del pueblo.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <img src="img/presa_san_antonio.jpeg" class="img-fluid" alt="Presa San Antonio">
+                </div>
+                <div class="col-md-6">
+                    <h3>Presa San Antonio</h3>
+                    <p>
+                        La Presa San Antonio es un lugar ideal para actividades recreativas como la pesca y paseos en bote. Además de su función como fuente de agua, ofrece un paisaje natural hermoso y tranquilo, perfecto para relajarse y disfrutar de la naturaleza.
+                    </p>
+                    <p>
+                        <strong>Cómo llegar:</strong> Desde el centro de Huasca de Ocampo, dirígete al oeste por la carretera principal. La presa está a unos 10 minutos en coche y está bien señalizada.
+                    </p>
+                </div>
             </div>
         </section>
-
-        <!-- Información sobre la historia -->
-        <section>
-            <h2>Historia de Huasca de Ocampo</h2>
-            <p>Huasca de Ocampo es un pueblo mágico con una rica historia que se remonta a la época prehispánica, cuando estaba habitado por grupos otomíes y toltecas. Durante la época colonial, se establecieron varias haciendas mineras en la zona, contribuyendo al desarrollo económico de la región. En el siglo XIX, Huasca de Ocampo se convirtió en un importante centro minero y agrícola, y muchas de sus construcciones históricas aún se conservan en la actualidad, como la Hacienda San Miguel Regla y la Hacienda Santa María Regla.</p>
-        </section>
-
-        <!-- Información sobre los lugares de interés -->
-        <section id="prismas">
-            <h2>Cascadas de Prismas Basálticos</h2>
-            <p>Las Cascadas de Prismas Basálticos son una formación rocosa impresionante ubicada en Huasca de Ocampo. Estas cascadas, formadas por columnas de basalto de origen volcánico, son el resultado de la solidificación de lava hace millones de años. Se cree que estas formaciones únicas tienen una antigüedad de alrededor de 30 millones de años. Las cascadas son una atracción turística popular y ofrecen una vista impresionante de la naturaleza en su máximo esplendor.</p>
-        </section>
-        
-        <section id="san_miguel">
-            <h2>Hacienda San Miguel Regla</h2>
-            <p>La Hacienda San Miguel Regla es una antigua hacienda minera ubicada en las afueras de Huasca de Ocampo. Fundada en el siglo XVIII, esta hacienda jugó un papel crucial en la historia minera de la región, especialmente durante el auge de la minería de plata. La hacienda es un ejemplo impresionante de la arquitectura colonial mexicana y ofrece a los visitantes la oportunidad de explorar sus hermosos jardines, patios y edificios históricos.</p>
-        </section>
-        
-        <section id="santa_maria">
-            <h2>Hacienda Santa María Regla</h2>
-            <p>La Hacienda Santa María Regla es otra hacienda histórica situada en Huasca de Ocampo. Fundada en el siglo XVIII, esta hacienda también estuvo involucrada en la industria minera y fue una de las principales productoras de plata en su época. La hacienda cuenta con impresionantes construcciones coloniales, incluyendo una capilla, patios y jardines. Hoy en día, la hacienda es un destino turístico popular donde los visitantes pueden aprender sobre la historia de la región y disfrutar de su belleza arquitectónica.</p>
-        </section>
-        
-        <section id="presa">
-            <h2>Presa San Antonio</h2>
-            <p>La Presa San Antonio es una importante fuente de agua ubicada en las cercanías de Huasca de Ocampo. Construida en el siglo XIX para abastecer de agua a la región, esta presa es un ejemplo impresionante de ingeniería hidráulica de la época colonial. Además de su función como fuente de agua, la Presa San Antonio también ofrece oportunidades recreativas para los visitantes, como la pesca y paseos en bote, y proporciona un hermoso paisaje natural para disfrutar.</p>
-        </section>
-        
-        <section id="parroquia">
-            <h2>Parroquia de San Juan Bautista</h2>
-            <p>La Parroquia de San Juan Bautista es una iglesia histórica ubicada en el centro de Huasca de Ocampo. Construida en el siglo XVI, esta iglesia es un importante punto de referencia en el pueblo y un símbolo de la fe católica en la región. La parroquia presenta una arquitectura colonial encantadora, con detalles ornamentales y una impresionante fachada. Los visitantes pueden explorar el interior de la iglesia y admirar su belleza arquitectónica y su rica historia.</p>
-        </section>
-        
     </main>
 
     <!-- Botones para enlaces a otras páginas -->
-    <div class="enlaces">
-        <a href="ComidaTradicional.html" class="boton">Comida Tradicional</a>
-        <a href="contacto.html" class="boton">Contacto</a>
-        <a href="Sabias que.html" class="boton">Sabias que</a>
+    <div class="enlaces text-center my-4">
+        <a href="ComidaTradicional.html" class="btn btn-primary mx-2">Comida Tradicional</a>
+        <a href="contacto.html" class="btn btn-primary mx-2">Contacto</a>
+        <a href="Sabias que.html" class="btn btn-primary mx-2">Sabías que</a>
     </div>
 
     <!-- Pie de página -->
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <p>Guillermo Martinez</p>
     </footer>
 
-    <!-- Enlace al archivo JavaScript si lo tienes -->
-    <script src="script.js"></script>
+    <!-- Enlace a jQuery, Popper.js y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
