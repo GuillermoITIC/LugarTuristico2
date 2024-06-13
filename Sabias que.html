@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabías que - Haciendas de Huasca de Ocampo</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <!-- Enlace a Bootstrap CSS para mejorar el diseño -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1>Las Haciendas de Huasca de Ocampo</h1>
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center py-3 d-flex justify-content-between align-items-center">
+        <div class="logo d-flex">
+            <img src="img/log_ho.png" alt="Logo 1" style="height: 50px; margin-right: 10px;">
+            <img src="img/Logo-TecNM_Original.png" alt="Logo 2" style="height: 50px; margin-right: 10px;">
+            <img src="img/LogoITP_Original.png" alt="Logo 3" style="height: 50px;">
+        </div>
+        <h1 class="flex-grow-1">Sabías que - Haciendas de Huasca de Ocampo</h1>
+      <!--  <div class="translate">
+            <button id="translate-es" class="btn btn-secondary">ES</button>
+            <button id="translate-en" class="btn btn-secondary">EN</button>
+        </div>-->
     </header>
-    
-    <div id="color-selector">
+    <!-- Selector de colores -->
+    <div class="container my-3 text-center">
         <label for="colores">Elige un color:</label>
         <select id="colores" onchange="cambiarColor()">
             <option value="default">Selecciona un color</option>
@@ -20,10 +33,12 @@
             <option value="amarillo">Amarillo</option>
         </select>
     </div>
-
-    <main>
+    <div class="enlaces text-center my-3">
+        <a href="index.html" class="btn btn-primary mx-2">Volver a Inicio</a>
+    </div>
+    <main class="container my-5">
         <section>
-            <h2>Haciendas Importantes de Huasca de Ocampo</h2>
+            <h2 class="text-center mb-4">Haciendas Importantes de Huasca de Ocampo</h2>
             <p>Huasca de Ocampo es conocido por sus históricas haciendas que reflejan la rica historia y cultura de la región. Aquí te presentamos las tres haciendas más importantes:</p>
 
             <div class="haciendas">
@@ -50,9 +65,9 @@
                 </div>
             </div>
 
-            <h2>Video sobre las Haciendas de Huasca de Ocampo</h2>
+            <h2 class="text-center mb-4">Video sobre las Haciendas de Huasca de Ocampo</h2>
             <p>Para conocer más sobre estas fascinantes haciendas, te invitamos a ver el siguiente video:</p>
-            <div class="video-container">
+            <div class="video-container text-center mb-4">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Fhc8mgyxlxE?si=4m8NJ2px2rJrw9WG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <p><strong>Video por:</strong> SantosRecorre</p>
                 <p><strong>Fecha de estreno:</strong> 15 de enero de 2023</p>
@@ -63,7 +78,7 @@
         </section>
 
         <section>
-            <h2>Te invitamos a que participes en nuestro cuestionario</h2>
+            <h2 class="text-center mb-4">Te invitamos a que participes en nuestro cuestionario</h2>
             <p>El mejor obtendrá un premio. Responde las siguientes preguntas sobre Huasca de Ocampo:</p>
             <form id="cuestionario">
                 <div class="pregunta">
@@ -124,21 +139,49 @@
                     <input type="radio" id="p9b" name="pregunta9" value="Santa María Regla"> Hacienda Santa María Regla<br>
                     <input type="radio" id="p9c" name="pregunta9" value="San Antonio Regla"> Hacienda San Antonio Regla<br>
                 </div>
-                <button type="button" onclick="calificarCuestionario()">Enviar</button>
+                <button type="button" class="btn btn-primary mt-3" onclick="calificarCuestionario()">Enviar</button>
             </form>
-            <p id="resultado"></p>
-            <h3>Resultados previos:</h3>
-            <ul id="resultados-previos"></ul>
+            <p id="resultado" class="mt-4"></p>
+            <h3 class="mt-5">Resultados previos:</h3>
+            <ul id="resultados-previos" class="list-group mt-2"></ul>
         </section>
     </main>
 
-    <div class="enlaces">
-        <a href="contacto.html" class="boton">Contacto</a>
-        <a href="index.html" class="boton">Volver a Inicio</a>
+    <!-- Botones para enlaces a otras páginas -->
+    <div class="enlaces text-center my-4">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="ComidaTradicional.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoCT.jpg" alt="Comida Tradicional">
+                    <h4>Comida tradicional</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="contacto.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoCon.jpg" alt="Contacto">
+                    <h4>Contactanos</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Sabias que.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoSQ.jpg" alt="Sabías que">
+                    <h4>Sabías que</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Lugar.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoLQV.jpg" alt="Lugares que visitar">
+                    <h4>Lugares que debes visitar</h4>
+                </a>
+            </div>
+        </div>
     </div>
-    <footer>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>Guillermo Martinez</p>
     </footer>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

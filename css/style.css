@@ -17,6 +17,18 @@ body.comida-tradicional {
     background-position: center;
     color: #fff; /* Color de texto principal */
 }
+body.Sabias_que {
+    background-image: url('./imagen_comida.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Color de texto principal */
+}
+body.Lugar {
+    background-image: url('./imagen_lugar.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Color de texto principal */
+}
 header, footer {
     background-color: #333;
     color: #fff;
@@ -89,3 +101,58 @@ section {
 body.azul { background-color: #ADD8E6; }
 body.verde { background-color: #98FB98; }
 body.amarillo { background-color: #FFFFE0; }
+
+/* Estilos para la sección de información esencial */
+footer .container .row div {
+    margin: 10px 0;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icons a {
+    margin: 0 10px;
+}
+.social-icons img {
+    height: 30px;
+}
+
+/* Estilos para el buscador */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.search-bar button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los botones de enlaces con imágenes */
+.enlaces .btn-img {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+.enlaces .btn-img img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.enlaces .btn-img img:hover {
+    transform: scale(1.05);
+}

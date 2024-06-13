@@ -1,0 +1,47 @@
+/* blog.css */
+.text-body-emphasis {
+    color: #333;
+  }
+  .bg-body-secondary {
+    background-color: #f7f7f7;
+  }
+  .p-4 {
+    padding: 1.5rem !important;
+  }
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+  .rounded {
+    border-radius: 0.25rem !important;
+  }
+  .shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075) !important;
+  }
+  .text-primary-emphasis {
+    color: #0d6efd !important;
+  }
+  .text-success-emphasis {
+    color: #198754 !important;
+  }
+  .fst-italic {
+    font-style: italic !important;
+  }
+  .border-bottom {
+    border-bottom: 1px solid #dee2e6 !important;
+  }
+  .container {
+    max-width: 960px;
+  }
+  .blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+  }
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #6c757d;
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  

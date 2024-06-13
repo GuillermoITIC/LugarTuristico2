@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Enlace a Bootstrap CSS para mejorar el diseño -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Enlace a estilos para cambio de colores -->
+    <link rel="stylesheet" href="css/blog.css">
     <style>
         body.azul { background-color: #ADD8E6; }
         body.verde { background-color: #98FB98; }
@@ -16,13 +16,18 @@
 </head>
 <body>
     <!-- Encabezado -->
-    <header class="bg-primary text-white text-center py-3">
-        <h1>Huasca de Ocampo - Pueblo Mágico</h1>
+    <header class="bg-primary text-white text-center py-3 d-flex justify-content-between align-items-center">
+        <div class="logo d-flex">
+            <img src="img/log_ho.png" alt="Logo 1" style="height: 50px; margin-right: 10px;">
+            <img src="img/Logo-TecNM_Original.png" alt="Logo 2" style="height: 50px; margin-right: 10px;">
+            <img src="img/LogoITP_Original.png" alt="Logo 3" style="height: 50px;">
+        </div>
+        <h1 class="flex-grow-1">Huasca de Ocampo - Pueblo Mágico</h1>
+      <!--  <div class="translate">
+            <button id="translate-es" class="btn btn-secondary">ES</button>
+            <button id="translate-en" class="btn btn-secondary">EN</button>
+        </div>-->
     </header>
-    <!-- Contador de visitas -->
-    <div class="container my-3 text-center">
-        <p>Visitas a esta página: <span id="visit-counter">0</span></p>
-    </div>
     <!-- Selector de colores -->
     <div class="container my-3 text-center">
         <label for="colores">Elige un color:</label>
@@ -33,14 +38,27 @@
             <option value="amarillo">Amarillo</option>
         </select>
     </div>
-
+    <!-- Buscador 
+    <div class="search-bar text-center my-3">
+        <input type="text" id="search" placeholder="Buscar">
+        <button onclick="buscar()" class="btn btn-primary">Buscar</button>
+    </div>-->
+<!-- Menú de información -->
+<section>
+    <h2 class="text-center mb-4">Menú de Información</h2>
+    <div class="list-group">
+        <a href="Sabias que.html" class="list-group-item list-group-item-action">Historia de Huasca de Ocampo</a>
+        <a href="index.html" class="list-group-item list-group-item-action">¿Por qué es un Pueblo Mágico?</a>
+        <a href="Lugar.html" class="list-group-item list-group-item-action">Lugares más visitados y cómo llegar</a>
+    </div>
+</section>
     <!-- Contenido principal -->
     <main class="container my-5">
         <!-- Nueva sección de Historia -->
         <section>
             <h2 class="text-center mb-4">Historia de Huasca de Ocampo</h2>
             <p>
-                Huasca de Ocampo, ubicado en el estado de Hidalgo, México, es un destino que ha capturado la imaginación y el interés de visitantes de todo el mundo. Su historia se remonta a tiempos prehispánicos, cuando la región era habitada por diversos grupos indígenas, incluyendo otomíes y nahuas. Estas culturas dejaron su huella en la región, lo que se puede apreciar en los vestigios arqueológicos y las tradiciones que aún persisten en la comunidad.
+                Huasca de Ocampo, ubicado en el estado de Hidalgo, México, es un destino que ha capturado la imaginación y el interés de visitantes de todo el mundo. Su historia se remonta a tiempos prehispánicos,cuando la región era habitada por diversos grupos indígenas, incluyendo otomíes y nahuas. Estas culturas dejaron su huella en la región, lo que se puede apreciar en los vestigios arqueológicos y las tradiciones que aún persisten en la comunidad.
             </p>
             <p>
                 Con la llegada de los españoles en el siglo XVI, Huasca de Ocampo comenzó a transformarse. Los colonizadores españoles trajeron consigo nuevas técnicas agrícolas y de minería, lo que condujo a la fundación de importantes haciendas. Durante los siglos XVII y XVIII, Huasca de Ocampo se consolidó como un centro minero de gran relevancia. Las haciendas, como San Miguel Regla y Santa María Regla, no solo sirvieron como centros de producción, sino también como símbolos de la riqueza y el poder de la época colonial.
@@ -63,7 +81,7 @@
                 Huasca de Ocampo es un destino que encanta a quienes lo visitan por su combinación única de historia, cultura y belleza natural. Nombrado Pueblo Mágico en el año 2001, este lugar ofrece una experiencia inolvidable a sus visitantes. A continuación, exploramos las razones por las que Huasca de Ocampo se ha ganado este prestigioso título.
             </p>
             <p>
-                La historia de Huasca de Ocampo se remonta a la época prehispánica, cuando estaba habitado por grupos otomíes y toltecas. Durante la colonización española, la región se convirtió en un centro minero importante, con la fundación de varias haciendas que aún se conservan en la actualidad. Estas haciendas son testimonio del auge económico de la región durante los siglos XVII y XVIII. Entre las más destacadas se encuentran la Hacienda San Miguel Regla y la Hacienda Santa María Regla, las cuales ofrecen una visión fascinante de la arquitectura colonial y la historia minera.
+                La historia de Huasca de Ocampo se remonta a la época prehispánica,cuando estaba habitado por grupos otomíes y toltecas. Durante la colonización española, la región se convirtió en un centro minero importante, con la fundación de varias haciendas que aún se conservan en la actualidad. Estas haciendas son testimonio del auge económico de la región durante los siglos XVII y XVIII. Entre las más destacadas se encuentran la Hacienda San Miguel Regla y la Hacienda Santa María Regla, las cuales ofrecen una visión fascinante de la arquitectura colonial y la historia minera.
             </p>
             <p>
                 La riqueza natural de Huasca de Ocampo es otro de sus grandes atractivos. El paisaje está dominado por formaciones geológicas impresionantes, como los Prismas Basálticos, que son columnas de basalto formadas por la solidificación de lava hace millones de años. Este fenómeno geológico es uno de los pocos en el mundo y ofrece un espectáculo visual que deja maravillados a los visitantes. Además, la región cuenta con numerosas cascadas, ríos y bosques que son ideales para actividades al aire libre como senderismo, pesca y paseos en bote.
@@ -85,61 +103,99 @@
             
             <div class="row mb-4">
                 <div class="col-md-6">
-                    <img src="img/prismas_basalticos.jpeg" class="img-fluid" alt="Prismas Basálticos">
+                    <div class="card">
+                        <img src="img/prismas_basalticos.jpeg" class="card-img-top" alt="Prismas Basálticos">
+                        <div class="card-body">
+                            <h5 class="card-title">Cascadas de Prismas Basálticos</h5>
+                            <p class="card-text">Formadas por columnas de basalto hexagonales, estas cascadas ofrecen un espectáculo natural impresionante.</p>
+                            <a href="info/Cascadas_de_Prismas_Basálticos.html" class="btn btn-primary">Más información</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h3>Cascadas de Prismas Basálticos</h3>
-                    <p>
-                        Las Cascadas de Prismas Basálticos son una de las principales atracciones turísticas de Huasca de Ocampo. Formadas por columnas de basalto hexagonales, estas cascadas ofrecen un espectáculo natural impresionante. La formación geológica es el resultado de la solidificación de lava hace millones de años, creando estructuras únicas en el mundo.
-                    </p>
-                    <p>
-                        <strong>Cómo llegar:</strong> Desde el centro de Huasca de Ocampo, puedes tomar un taxi o conducir aproximadamente 20 minutos hacia el noreste. Las señalizaciones en el camino te guiarán directamente a los Prismas Basálticos.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <img src="img/san_miguel_regla.jpg" class="img-fluid" alt="Hacienda San Miguel Regla">
-                </div>
-                <div class="col-md-6">
-                    <h3>Hacienda San Miguel Regla</h3>
-                    <p>
-                        La Hacienda San Miguel Regla es una antigua hacienda minera fundada en el siglo XVIII. Este sitio histórico ofrece a los visitantes la oportunidad de explorar sus hermosos jardines, patios y edificios coloniales, brindando una experiencia única de la arquitectura y vida colonial.
-                    </p>
-                    <p>
-                        <strong>Cómo llegar:</strong> La hacienda se encuentra a unos 15 minutos en coche desde el centro de Huasca de Ocampo. Puedes llegar siguiendo las señales hacia la Hacienda San Miguel Regla, ubicada en las afueras del pueblo.
-                    </p>
+                    <div class="card">
+                        <img src="img/san_miguel_regla.jpg" class="card-img-top" alt="Hacienda San Miguel Regla">
+                        <div class="card-body">
+                            <h5 class="card-title">Hacienda San Miguel Regla</h5>
+                            <p class="card-text">Una antigua hacienda minera fundada en el siglo XVIII, ofrece una experiencia única de la arquitectura y vida colonial.</p>
+                            <a href="info/Hacienda_San_Miguel.html" class="btn btn-primary">Más información</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
             <div class="row mb-4">
                 <div class="col-md-6">
-                    <img src="img/presa_san_antonio.jpeg" class="img-fluid" alt="Presa San Antonio">
+                    <div class="card">
+                        <img src="img/presa_san_antonio.jpeg" class="card-img-top" alt="Presa San Antonio">
+                        <div class="card-body">
+                            <h5 class="card-title">Presa San Antonio</h5>
+                            <p class="card-text">Ideal para actividades recreativas como la pesca y paseos en bote, ofreciendo un paisaje natural hermoso y tranquilo.</p>
+                            <a href="info/Presa_San_Antonio.html" class="btn btn-primary">Más información</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h3>Presa San Antonio</h3>
-                    <p>
-                        La Presa San Antonio es un lugar ideal para actividades recreativas como la pesca y paseos en bote. Además de su función como fuente de agua, ofrece un paisaje natural hermoso y tranquilo, perfecto para relajarse y disfrutar de la naturaleza.
-                    </p>
-                    <p>
-                        <strong>Cómo llegar:</strong> Desde el centro de Huasca de Ocampo, dirígete al oeste por la carretera principal. La presa está a unos 10 minutos en coche y está bien señalizada.
-                    </p>
+                    <div class="card">
+                        <img src="img/Hacienda Santa María Regla.jpg" class="card-img-top" alt="Hacienda Santa María Regla">
+                        <div class="card-body">
+                            <h5 class="card-title">Hacienda Santa María Regla</h5>
+                            <p class="card-text">Otra antigua hacienda minera con impresionantes edificios coloniales y hermosos jardines.</p>
+                            <a href="info/Hacienda_Santa_María_Regla.html" class="btn btn-primary">Más información</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
 
     <!-- Botones para enlaces a otras páginas -->
     <div class="enlaces text-center my-4">
-        <a href="ComidaTradicional.html" class="btn btn-primary mx-2">Comida Tradicional</a>
-        <a href="contacto.html" class="btn btn-primary mx-2">Contacto</a>
-        <a href="Sabias que.html" class="btn btn-primary mx-2">Sabías que</a>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="ComidaTradicional.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoCT.jpg" alt="Comida Tradicional">
+                    <h4>Comida tradicional</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="contacto.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoCon.jpg" alt="Contacto">
+                    <h4>Contactanos</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Sabias que.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoSQ.jpg" alt="Sabías que">
+                    <h4>Sabías que</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Lugar.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoLQV.jpg" alt="Lugares que visitar">
+                    <h4>Lugares que debes visitar</h4>
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Pie de página -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>Guillermo Martinez</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Para atención de turistas internacionales llama a: <strong>01 771 791 0793</strong></p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://x.com/Guille310502?s=09"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/armando.martines.313/"><img src="img/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/guillermo_martinez_27/"><img src="img/instagram1.png" alt="Instagram"></a>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <p>Derechos de autor &copy; 2024 Guillermo Martinez. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Enlace a jQuery, Popper.js y Bootstrap JS -->
@@ -147,5 +203,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- Contador de visitas -->
+<div id="contador-visitas" style="position: fixed; bottom: 10px; right: 10px; background-color: rgba(0, 0, 0, 0.5); color: #fff; padding: 5px 10px; border-radius: 5px;">
+    Visitas: <span id="visitas-contador">0</span>
+</div>
+
 </body>
 </html>

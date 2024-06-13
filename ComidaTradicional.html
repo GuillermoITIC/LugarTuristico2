@@ -10,8 +10,17 @@
 </head>
 <body>
     <!-- Encabezado -->
-    <header class="bg-primary text-white text-center py-3">
-        <h1>Hablemos sobre su gastronomía</h1>
+    <header class="bg-primary text-white text-center py-3 d-flex justify-content-between align-items-center">
+        <div class="logo d-flex">
+            <img src="img/log_ho.png" alt="Logo 1" style="height: 50px; margin-right: 10px;">
+            <img src="img/Logo-TecNM_Original.png" alt="Logo 2" style="height: 50px; margin-right: 10px;">
+            <img src="img/LogoITP_Original.png" alt="Logo 3" style="height: 50px;">
+        </div>
+        <h1 class="flex-grow-1">Huasca de Ocampo - Pueblo Mágico</h1>
+       <!-- <div class="translate">
+            <button id="translate-es" class="btn btn-secondary">ES</button>
+            <button id="translate-en" class="btn btn-secondary">EN</button>
+        </div>-->
     </header>
 
     <div id="color-selector" class="text-center my-4">
@@ -23,7 +32,9 @@
             <option value="amarillo">Amarillo</option>
         </select>
     </div>
-
+    <div class="enlaces text-center">
+        <a href="index.html" class="btn btn-primary mx-2">Volver a Inicio</a>
+    </div>
     <!-- Contenido principal -->
     <main class="container my-5">
         <section>
@@ -89,9 +100,34 @@
         </section>
     </main>
 
-    <div class="enlaces text-center">
-        <a href="contacto.html" class="btn btn-primary mx-2">Contacto</a>
-        <a href="index.html" class="btn btn-primary mx-2">Volver a Inicio</a>
+    <!-- Botones para enlaces a otras páginas -->
+    <div class="enlaces text-center my-4">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="ComidaTradicional.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoCT.jpg" alt="Comida Tradicional">
+                    <h4>Comida tradicional</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="contacto.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoCon.jpg" alt="Contacto">
+                    <h4>Contactanos</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Sabias que.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoSQ.jpg" alt="Sabías que">
+                    <h4>Sabías que</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Lugar.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoLQV.jpg" alt="Lugares que visitar">
+                    <h4>Lugares que debes visitar</h4>
+                </a>
+            </div>
+        </div>
     </div>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">

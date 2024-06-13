@@ -1,89 +1,83 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtener el formulario de lugares de interés
-    const formLugares = document.getElementById('form-lugares');
-
-    if (formLugares) {
-        // Agregar un evento de escucha para el envío del formulario
-        formLugares.addEventListener('submit', function(event) {
-            // Prevenir el comportamiento predeterminado de envío del formulario
-            event.preventDefault();
-
-            // Obtener el valor seleccionado del formulario
-            const lugarSeleccionado = formLugares.querySelector('select[name="lugar"]').value;
-
-            // Verificar si se ha seleccionado un lugar válido
-            if (lugarSeleccionado) {
-                // Construir la URL de destino basada en el lugar seleccionado
-                let urlDestino = lugarSeleccionado + '.html';
-
-                // Abrir una nueva pestaña con la URL de destino
-                window.open(urlDestino, '_blank');
-            } else {
-                // Mostrar un mensaje de error si no se ha seleccionado ningún lugar
-                alert('Por favor, selecciona un lugar de interés.');
-            }
-        });
-    }
-
     // Función para cambiar el color de fondo
-    window.cambiarColor = function() {
+    function cambiarColor() {
         const color = document.getElementById('colores').value;
         document.body.className = color;
     }
 
-    function calificarCuestionario() {
-        const respuestasCorrectas = {
-            pregunta1: 'XVIII',
-            pregunta2: 'Santa María Regla',
-            pregunta3: 'San Antonio Regla',
-            pregunta4: 'Hidalgo',
-            pregunta5: 'Senderismo',
-            pregunta6: 'San Miguel Regla',
-            pregunta7: 'Talleres de artesanía',
-            pregunta8: 'Siglo XVIII',
-            pregunta9: 'Santa María Regla'
-        };
-
-        let puntaje = 0;
-        const nombre = document.getElementById('nombre').value;
-        
-        for (let pregunta in respuestasCorrectas) {
-            const opciones = document.getElementsByName(pregunta);
-            for (let i = 0; i < opciones.length; i++) {
-                if (opciones[i].checked && opciones[i].value === respuestasCorrectas[pregunta]) {
-                    puntaje++;
-                }
-            }
+    function mostrarInfo(lugar) {
+        let info;
+        switch (lugar) {
+            case 'prismas':
+                info = "Formadas por columnas de basalto hexagonales, estas cascadas ofrecen un espectáculo natural impresionante. Cómo llegar: Desde el centro de Huasca de Ocampo, puedes tomar un taxi o conducir aproximadamente 20 minutos hacia el noreste. Las señalizaciones en el camino te guiarán directamente a los Prismas Basálticos.";
+                break;
+            case 'san_miguel':
+                info = "Una antigua hacienda minera fundada en el siglo XVIII, ofrece una experiencia única de la arquitectura y vida colonial. Cómo llegar: La hacienda se encuentra a unos 15 minutos en coche desde el centro de Huasca de Ocampo. Puedes llegar siguiendo las señales hacia la Hacienda San Miguel Regla, ubicada en las afueras del pueblo.";
+                break;
+            case 'presa':
+                info = "Ideal para actividades recreativas como la pesca y paseos en bote, ofreciendo un paisaje natural hermoso y tranquilo. Cómo llegar: Desde el centro de Huasca de Ocampo, dirígete al oeste por la carretera principal. La presa está a unos 10 minutos en coche y está bien señalizada.";
+                break;
+            case 'santa_maria':
+                info = "Otra antigua hacienda minera con impresionantes edificios coloniales y hermosos jardines. Cómo llegar: La hacienda se encuentra a unos 15 minutos en coche desde el centro de Huasca de Ocampo. Puedes llegar siguiendo las señales hacia la Hacienda Santa Maria Regla, ubicada en las afueras del pueblo.";
+                break;
+            default:
+                info = "Información no disponible.";
         }
-        
-        const resultado = document.getElementById('resultado');
-        resultado.textContent = `${nombre}, has obtenido ${puntaje} de 9 puntos.`;
-        guardarResultado(nombre, puntaje);
+        alert(info);
     }
 
-    function guardarResultado(nombre, puntaje) {
-        const resultadosPrevios = document.getElementById('resultados-previos');
-        const li = document.createElement('li');
-        li.textContent = `${nombre}: ${puntaje} puntos`;
-        resultadosPrevios.appendChild(li);
+    function buscar() {
+        const input = document.getElementById('search').value.toLowerCase();
+        const lugares = {
+            'prismas basálticos': 'Formadas por columnas de basalto hexagonales, estas cascadas ofrecen un espectáculo natural impresionante.',
+            'san miguel regla': 'Una antigua hacienda minera fundada en el siglo XVIII, ofrece una experiencia única de la arquitectura y vida colonial.',
+            'presa san antonio': 'Ideal para actividades recreativas como la pesca y paseos en bote, ofreciendo un paisaje natural hermoso y tranquilo.',
+            'hacienda santa maria': 'Otra antigua hacienda minera con impresionantes edificios coloniales y hermosos jardines.',
+        };
+        const info = lugares[input] || 'Lugar no encontrado. Intente con otro nombre.';
+        alert(info);
     }
-
-    document.getElementById('cuestionario').addEventListener('submit', function(event) {
-        event.preventDefault();
-        calificarCuestionario();
-    });
 
     document.getElementById('colores').addEventListener('change', cambiarColor);
 
-    // Función para actualizar y mostrar el contador de visitas
+    document.getElementById('translate-es').addEventListener('click', function() {
+        document.body.lang = 'es';
+        alert('Página traducida al español');
+    });
+
+    document.getElementById('translate-en').addEventListener('click', function() {
+        document.body.lang = 'en';
+        alert('Page translated to English');
+    });
+
     function actualizarContadorVisitas() {
-        const visitCounter = document.getElementById('visit-counter');
         let visitas = localStorage.getItem('visitas') || 0;
         visitas = parseInt(visitas) + 1;
         localStorage.setItem('visitas', visitas);
-        visitCounter.textContent = visitas;
+        document.getElementById('visitas-contador').textContent = visitas;
+        console.log('Visitas:', visitas);
+
+        // Si se alcanza el límite de 100000 visitas, mostrar un mensaje y deshabilitar el contador
+        if (visitas >= 100000) {
+            alert('Se ha alcanzado el límite de 100000 visitas. Gracias por visitar nuestro sitio.');
+            document.getElementById('contador-visitas').style.display = 'none';
+        }
     }
 
-    // Llamar a la función para actualizar el contador de visitas
     actualizarContadorVisitas();
+
+
+    // Función para alternar entre dos imágenes cada 5 segundos
+    setInterval(function() {
+        var image1 = document.getElementById('image1');
+        var image2 = document.getElementById('image2');
+
+        if (image1.style.display !== 'none') {
+            image1.style.display = 'none';
+            image2.style.display = 'block';
+        } else {
+            image1.style.display = 'block';
+            image2.style.display = 'none';
+        }
+    }, 5000); // Cambio de imagen cada 5 segundos (5000 milisegundos)
 });

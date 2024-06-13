@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacienda Santa María Regla - Huasca de Ocampo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { background-color: #f8f9fa; color: #333; }
+        .logo img { height: 50px; margin-right: 10px; }
+        .translate button { margin: 0 5px; }
+        header, footer { background-color: #333; color: #fff; text-align: center; padding: 20px; }
+        .container { padding: 20px; }
+        .enlaces .btn-img { padding: 0; border: none; background-color: transparent; }
+        .enlaces .btn-img img { width: 50%; height: auto; border-radius: 5px; transition: transform 0.3s ease; }
+        .enlaces .btn-img img:hover { transform: scale(1.05); }
+        .selector { text-align: center; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="d-flex justify-content-between align-items-center">
+        <div class="logo d-flex">
+            <img src="../img/log_ho.png" alt="Logo 1">
+            <img src="../img/Logo-TecNM_Original.png" alt="Logo 2">
+            <img src="../img/LogoITP_Original.png" alt="Logo 3">
+        </div>
+        <h1 class="flex-grow-1">Huasca de Ocampo - Pueblo Mágico</h1>
+        <div class="translate">
+            <button id="translate-es" class="btn btn-secondary">ES</button>
+            <button id="translate-en" class="btn btn-secondary">EN</button>
+        </div>
+    </header>
+
+    <!-- Selector de colores -->
+    <div class="selector">
+        <label for="colores">Elige un color:</label>
+        <select id="colores" onchange="cambiarColor()">
+            <option value="default">Selecciona un color</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+        </select>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <h2 class="text-center mb-4">Hacienda Santa María Regla</h2>
+        <p>Construida en el siglo XVIII, la Hacienda Santa María Regla es famosa por su espectacular paisaje y su papel histórico en la minería de la región. Fundada también por Don Pedro Romero de Terreros, esta hacienda destaca por sus estructuras de piedra y su ambiente tranquilo. La hacienda está situada en un cañón rodeado de formaciones rocosas y cascadas, lo que la convierte en un lugar de gran belleza natural. Además de su importancia histórica, la Hacienda Santa María Regla es un destino ideal para actividades al aire libre como senderismo, exploración de cuevas y visitas guiadas que narran su rica historia.</p>
+        <img src="../img/Hacienda Santa María Regla.jpg" alt="Hacienda Santa María Regla" class="img-fluid">
+        <p>Para llegar a la hacienda, puedes conducir unos 15 minutos desde el centro de Huasca de Ocampo. Las señales en el camino te guiarán directamente a este histórico lugar.</p>
+    </main>
+
+    <!-- Enlaces a otras páginas -->
+    <div class="enlaces text-center my-4">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="../ComidaTradicional.html" class="btn btn-lg btn-block btn-img">
+                    <img src="../img/LogoCT.jpg" alt="Comida Tradicional">
+                    <h4>Comida Tradicional</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="../contacto.html" class="btn btn-lg btn-block btn-img">
+                    <img src="../img/LogoCon.jpg" alt="Contacto">
+                    <h4>Contacto</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="../Sabias_que.html" class="btn btn-lg btn-block btn-img">
+                    <img src="../img/LogoSQ.jpg" alt="Sabías que">
+                    <h4>Sabías que</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="../Lugar.html" class="btn btn-lg btn-block btn-img">
+                    <img src="../img/LogoLQV.jpg" alt="Lugares que visitar">
+                    <h4>Lugares que visitar</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Guillermo Martinez</p>
+    </footer>
+
+    <!-- Enlace a jQuery, Popper.js y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

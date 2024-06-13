@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huasca de Ocampo - Pueblo Mágico</title>
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Enlace a Bootstrap CSS para mejorar el diseño -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center py-3 d-flex justify-content-between align-items-center">
+        <div class="logo d-flex">
+            <img src="img/log_ho.png" alt="Logo 1" style="height: 50px; margin-right: 10px;">
+            <img src="img/Logo-TecNM_Original.png" alt="Logo 2" style="height: 50px; margin-right: 10px;">
+            <img src="img/LogoITP_Original.png" alt="Logo 3" style="height: 50px;">
+        </div>
+        <h1 class="flex-grow-1">Lugares que debes visitar</h1>
+     <!--   <div class="translate">
+            <button id="translate-es" class="btn btn-secondary">ES</button>
+            <button id="translate-en" class="btn btn-secondary">EN</button>
+        </div>-->
+    </header>
+    <!-- Selector de colores -->
+    <div class="container my-3 text-center">
+        <label for="colores">Elige un color:</label>
+        <select id="colores" onchange="cambiarColor()">
+            <option value="default">Selecciona un color</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+        </select>
+    </div>
+    <div class="enlaces text-center my-3">
+        <a href="index.html" class="btn btn-primary mx-2">Volver a Inicio</a>
+    </div>
+    <main class="container my-5">
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+            <div class="col-lg-6 px-0">
+                <h1 class="display-4 fst-italic">Huasca de Ocampo</h1>
+                <p class="lead my-3">Descubre lo mejor de este pueblo mágico con nuestras recomendaciones.</p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary-emphasis">Qué hacer</strong>
+                        <h3 class="mb-0">Explora Huasca</h3>
+                        <p class="card-text mb-auto">Visita las impresionantes haciendas y los prismas basálticos.</p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img id="image1" src="img/SMR.jpeg" alt="Haciendas de Huasca" width="200" height="250">
+                        <img id="image2" src="img/PB2.jpeg" alt="Otra imagen" width="200" height="250" style="display: none;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">Qué comer</strong>
+                        <h3 class="mb-0">Gastronomía Local</h3>
+                        <p class="mb-auto">Prueba los tradicionales pastes y la barbacoa.</p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div id="image1" class="image-container">
+                            <img src="img/BHO.jpeg" alt="Comida de Huasca" width="200" height="250">
+                        </div>
+                        <div id="image2" class="image-container" style="display: none;">
+                            <img src="img/Pastes.jpeg" alt="Otra imagen" width="200" height="250">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    Información del Viaje
+                </h3>
+
+                <article class="blog-post">
+                    <h2 class="display-5 link-body-emphasis mb-1">Huasca de Ocampo</h2>
+                    <p class="blog-post-meta">Pueblo Mágico</p>
+                    <p>Huasca de Ocampo es un encantador pueblo mágico en Hidalgo, conocido por sus impresionantes formaciones naturales y su rica historia.</p>
+                    <img src="../LugarTuristico/img/360PB.jpg" alt="Prismas Basálticos" class="img-fluid">
+                    <p>Tiempo de llegada: 2 horas desde el centro de Pachuca.</p>
+                    <p>Qué hacer: Visita las haciendas históricas, los prismas basálticos, y disfruta de caminatas por la naturaleza.</p>
+                    <p>Qué comer: No te pierdas los pastes, la barbacoa, y los tlacoyos locales.</p>
+                    <p>Costo aproximado: $500 MXN por persona.</p>
+                    <p>Historia: Huasca de Ocampo tiene una historia rica y diversa, que se remonta a la época prehispánica. Durante la época colonial, fue un importante centro minero y agrícola.</p>
+                    <p>Eventos culturales: El pueblo mágico de Huasca de Ocampo es conocido por sus festivales culturales, como la Feria del Paste y la Feria del Barrio del Ex-Hacienda de San Miguel Regla.</p>
+                    <p>Actividades turísticas: Además de visitar los sitios históricos y naturales, puedes participar en actividades como paseos a caballo, ciclismo de montaña y rappel en los alrededores de Huasca.</p>
+                    <p>Recomendaciones de hospedaje: Huasca ofrece una variedad de opciones de hospedaje, que van desde hoteles boutique hasta cabañas rústicas en medio de la naturaleza.</p>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botones para enlaces a otras páginas -->
+    <div class="enlaces text-center my-4">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="ComidaTradicional.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoCT.jpg" alt="Comida Tradicional">
+                    <h4>Comida tradicional</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="contacto.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoCon.jpg" alt="Contacto">
+                    <h4>Contactanos</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Sabias que.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoSQ.jpg" alt="Sabías que">
+                    <h4>Sabías que</h4>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="Lugar.html" class="btn btn-lg btn-block btn-img">
+                    <img src="img/LogoLQV.jpg" alt="Lugares que visitar">
+                    <h4>Lugares que debes visitar</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Para atención de turistas internacionales llama a: <strong>01 771 791 0793</strong></p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://x.com/Guille310502?s=09"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/armando.martines.313/"><img src="img/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/guillermo_martinez_27/"><img src="img/instagram1.png" alt="Instagram"></a>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <p>Derechos de autor &copy; 2024 Guillermo Martinez. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
